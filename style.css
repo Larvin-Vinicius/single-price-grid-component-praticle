@@ -1,0 +1,177 @@
+/* fonte */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* Cores */
+:root {
+    /* Primary */
+    --Cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    /* Neutral */
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);  
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    font-family: 'Karla';
+    font-size: 16px;
+}
+
+body {
+    line-height: 1.5;
+    
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/**/
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--light-gray);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 42rem;
+    margin: 10rem auto;
+    border-radius: .5rem;
+    background-color: #fff;
+    box-shadow: 0 0 1rem #ccc;
+}
+
+header {
+    grid-column: 1 / -1;
+    padding: 2.5rem;
+}
+
+header h1 {
+    color: var(--Cyan);
+    font-weight: 700;
+}
+
+.guarantee {
+    color: var(--bright-yellow);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 1rem 0 .5rem 0;
+}
+
+.information p {
+    line-height: 1.8;
+    color: var(--grayish-blue);
+}
+
+.price {
+    background-color: var(--Cyan);
+    color: #fff;
+    padding: 2rem 2.4rem;
+    border-bottom-left-radius: .5rem;
+}
+
+.price h2, .why h2 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.price span {
+    font-weight: 700;
+    font-size: 2rem;
+    padding-right: 1rem;
+    color: #fff;
+}
+
+.price p, .why li {
+    color: var(--light-gray);
+    font-weight: 400;
+}
+
+.price a {
+    background-color: var(--bright-yellow);
+    display: block;
+    max-width: 100%;
+    margin: 2rem 0 .9rem 0;
+    padding: 1rem 0;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    border-radius: .5rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border: solid 1px var(--bright-yellow);
+}
+
+.price a:focus {
+    border: solid 1px green;
+}
+
+.why {
+    background-color: rgb(74, 190, 189);
+    border-bottom-right-radius: .5rem;
+    padding: 2rem 2.4rem;
+}
+
+.why h2 {
+    color: #fff;
+}
+
+/*Smart phone size*/
+
+@media (max-width: 1137px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:400px) {
+    main {
+        max-width: 320px;
+    }
+
+    html {
+        font-size: 13px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .guarantee {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .information p {
+        display: inline;
+    }
+
+    .price {
+        border-radius:0;
+    }
+
+    .why {
+        border-radius: 0  0 .5rem .5rem;
+    }
+}
+
+footer {
+    text-align: center;
+}
